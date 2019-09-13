@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+ int x, y;
+  scanf("%d",&x );
+  
+  if (x<10){
+    y= 2*x*x -1;
+  }
+  else if (x>10){
+    y= x-7;
+  }
+  else{
+    y=x*x*x;
+  }
+ printf( "%d", y);
+  return 0;
+}
