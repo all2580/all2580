@@ -13,7 +13,7 @@ int IsPalindrom (int n){
     i*=10;
   }
   
-  while (n>=10){
+  while (n>0){
     if(n%10 !=n/i){
       count=0;
       break;
