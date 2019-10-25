@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+double my_sqrt_r(double x, double cur_sqr, double prev_sqr) {
+  if ((prev_sqr - cur_sqr) > 0.0001 || (cur_sqr - prev_sqr) > 0.0001) {
+    prev_sqr = cur_sqr;
+    cur_sqr = 0.5 * (cur_sqr + x / cur_sqr);
+    return my_sqrt_r(x, cur_sqr, prev_sqr);
+  } else {
+    return cur_sqr;
+  }
+}
+
+double my_sqrt(double x) { 
+  return my_sqrt_r(x, x / 2, x); 
+}
+
+int main(void) {
+  double x;
+  scanf("%lf", &x);
+  printf("%lf", my_sqrt(x));
+  return 0;
+}
