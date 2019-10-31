@@ -15,7 +15,12 @@ int oddnes (int* str ){
 int abs_sum (int* str ){
   int sum =0;
   for (int i=0; i<N; i++){
-    sum += (str[i]);
+    if (str[i]>0){
+      sum += (str[i]);
+    } else {
+      sum -= (str[i]);
+    }
+    
   }
   return sum;
 }
